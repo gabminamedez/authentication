@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./components//Dashboard";
-import Login from "./components/Login";
-import Preferences from "./components/Preferences";
+import TokenPage from "./components/TokenPage";
+import TokenLogin from "./components/TokenLogin";
 import useToken from "./useToken";
 
 import "./App.css";
@@ -14,14 +13,13 @@ function App() {
   return (
     <Router>
       <div className="wrapper">
-        <h1>Application</h1>
+        <h1>Authentication</h1>
 
         <Routes>
           <Route
-            path="/dashboard"
-            element={token ? <Dashboard /> : <Login setToken={setToken} />}
+            path="/token-page"
+            element={token ? <TokenPage /> : <TokenLogin setToken={setToken} />}
           />
-          <Route path="/preferences" element={<Preferences />} />
         </Routes>
       </div>
     </Router>

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 import PropTypes from "prop-types";
 
-import "./Login.css";
+import "./TokenLogin.css";
 
 async function loginUser(credentials) {
-  return fetch("http://localhost:8080/login", {
+  return fetch("http://localhost:8080/token-login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -14,7 +14,7 @@ async function loginUser(credentials) {
   }).then((data) => data.json());
 }
 
-export default function Login({ setToken }) {
+export default function TokenLogin({ setToken }) {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
@@ -55,6 +55,6 @@ export default function Login({ setToken }) {
   );
 }
 
-Login.propTypes = {
+TokenLogin.propTypes = {
   setToken: PropTypes.func.isRequired,
 };

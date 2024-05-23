@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Dashboard() {
+export default function TokenPage() {
   const handleLogout = async () => {
     localStorage.clear();
     window.location.reload();
@@ -8,7 +8,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h2>Dashboard</h2>
+      <h2>TokenPage</h2>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );
