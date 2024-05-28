@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import TokenPage from "./components/TokenPage";
 import TokenLogin from "./components/TokenLogin";
-import useToken from "./useToken";
+import useToken from "./hooks/useToken";
 
 import "./App.css";
 

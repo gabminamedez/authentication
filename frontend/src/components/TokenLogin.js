@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import PropTypes from "prop-types";
 
-import "./TokenLogin.css";
+import "../styles/TokenLogin.css";
 
 async function loginUser(credentials) {
   return fetch("http://localhost:8080/token-login", {
